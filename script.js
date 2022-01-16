@@ -8,7 +8,7 @@ context.fillStyle = start_bg_color;
 context.fillRect(0, 0, canvas.width, canvas.height);
 
 let draw_color = "black";
-let draw_width = "2";
+let draw_width = "0.2";
 let is_drawing = false;
 
 let restore_array = [];
@@ -134,3 +134,94 @@ draw_rect = () => {
     context.strokeRect(locA.x, locA.y, locB.x - locA.x, locB.y - locA.y);
   });
 };
+
+doerase = (e) => {
+  // if(name=="eraser")
+  //       {
+            // scaleactive=false;
+            
+            if(darktheme==true)
+
+            context.strokeStyle="black";
+            
+
+            else if(darktheme==false)
+            tool.strokeStyle="white";
+            draw(e)
+        // }
+}
+
+
+
+
+
+//undo
+// let undo=document.querySelector("#undo");
+
+/*
+undo.addEventListener("click",function(){
+     undomaker();
+});*/
+
+
+// let ismousedown=false;
+// let undostack=[];
+// let redostack=[];
+
+
+
+// function undo_last(){
+// //clear board
+//  tool.clearRect(0,0,canvas.width,canvas.height);
+
+//  //pop last point
+//  while(undostack.length>0)
+//  {
+//      let cob=undostack[undostack.length-1];
+//      if(cob.desc=="md")
+//      {
+//          redostack.push(undostack.pop());
+//          break;
+//      }
+//      else if(cob.desc=="mm")
+//      {
+//          redostack.push(undostack.pop());
+//      }
+    
+
+//  }
+//  //redraw
+//  draw();
+// }
+
+
+
+
+
+
+//redo
+
+function redo_last(){
+    tool.clearRect(0,0,canvas.width,canvas.height);
+
+ 
+     
+    while(redostack.length>0)
+    {
+        let cob=redostack[redostack.length-1];
+        if(cob.desc=="md")
+        {
+            undostack.push(redostack.pop());
+            break;
+        }
+        else if(cob.desc=="mm")
+        {
+            undostack.push(redostack.pop());
+        }
+     
+   
+    }
+    redraw();
+   
+
+}

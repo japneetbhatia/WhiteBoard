@@ -41,8 +41,10 @@
           <span class="material-icons-outlined"><a href="notes.html">note_add</a></span>
           <p class="one">Notes</p>
         </div>
+        
       </div>
         <div class="drawing-tool">
+          
           <div onclick="pen_tool()" class="pen">
             <img src="images/paint-brush.png">
           </div>
@@ -108,12 +110,15 @@
             class="pen-range"
             onInput="draw_width = this.value"
           />
-          <p class="five">Font size</p>
+          <p class="five">Point size</p>
         </div>
+        <div class="record-screenshot" >
+            <img src="Eraser.svg" alt="" id="eraser" onclick="change_color(this)" style="background: white" >
+            <p>Eraser</p>
+            </div>
         <div class="record-screenshot">
-          <span class="material-icons-outlined"> radio_button_checked </span>
           <span class="material-icons-outlined screenshot"> screenshot </span>
-          <p class="six">Take a Screenshot</p>
+          <p class="six">Screenshot</p>
         </div>
         <div class="theme">
           <!-- <span class="material-icons-outlined"> dark_mode </span>
